@@ -35,12 +35,12 @@ fetch(retsrvurl, {
     }
 })
 .then(dataJson => {
-    dataReceived = JSON.parse(dataJson)
+    dataReceived = dataJson
 })
 .catch(err => {
     if (err === "server") return
     console.log(err)
 })
 
-console.log(`Received: ${dataReceived}`)  
+console.log(dataReceived.username)
 }
